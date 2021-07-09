@@ -299,7 +299,8 @@ const Shoping = () => {
     precio: 0,
     imagen: '',
     popular: false,
-    detalle: ''
+    detalle: '',
+    tipo: 0
   })
 
 
@@ -331,6 +332,7 @@ const Shoping = () => {
     let incodigo = ndata;
     //incodigo=incodigo.trim();  
     let solucion = nshoping.filter(task => (task.codigo) === incodigo);
+    let flag = false;
 
     if (solucion.length > 0) {
       alert("El codigo Ya existe ")
@@ -338,10 +340,21 @@ const Shoping = () => {
 
     }
     else {
+      if (tiposc === 0) {
+        flag = false;
+      }
+      else if (tiposc === 1) {
+        flag = true;
+      }
+      else {
+        flag = false;
+      }
       console.log(datos)
       console.log("Estes es el conteido de ndata")
       console.log(ndata)
-      dispatch(addShoping(datos, cate, nimagen, ndata))
+      console.log(cate)
+      //console.log()
+      dispatch(addShoping(datos, cate, nimagen, ndata, flag))
 
 
       setCate({
@@ -352,6 +365,8 @@ const Shoping = () => {
 
       setDatos({
         precio: 0,
+        tipo: 0,
+        popular: false,
 
       })
 

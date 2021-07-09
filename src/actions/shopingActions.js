@@ -41,7 +41,7 @@ export const addTipos = (eduData, history) => dispatch => {
 };
 
 */
-export const addShoping = (eduData, cate, nimagen, ndata, history) => dispatch => {
+export const addShoping = (eduData, cate, nimagen, ndata, flag, history) => dispatch => {
 
   console.log(eduData)
   console.log(ndata)
@@ -53,7 +53,7 @@ export const addShoping = (eduData, cate, nimagen, ndata, history) => dispatch =
       price: eduData.precio,
       description: eduData.contenido,
       category: cate.descripcion,
-      popular: eduData.popular,
+      popular: flag,
       imageUrls: nimagen
 
     })
