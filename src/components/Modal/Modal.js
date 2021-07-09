@@ -54,7 +54,7 @@ class Modal extends Component {
         tabIndex="-1"
         role="dialog"
         aria-hidden="true"
-        style={{ display: this.state.display }}
+        style={{ display: this.state.display, width: "50%", height: "100%" }}
       >
         <div className="modal-dialog " role="document">
           <div className="modal-content">{this.props.children}</div>
