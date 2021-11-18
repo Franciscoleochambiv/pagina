@@ -45,7 +45,7 @@ class Navbar extends Component {
 
           <li className="nav-item">
             <Link to="/radio">
-              Radio
+              Chat On Line
             </Link>
 
           </li>
@@ -118,7 +118,7 @@ class Navbar extends Component {
 
         <li className="nav-item">
           <Link className="nav-link" to="/radio">
-            Radio
+            Chat On Line
           </Link>
         </li>
 

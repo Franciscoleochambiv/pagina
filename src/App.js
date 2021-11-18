@@ -73,6 +73,9 @@ import Inicio from "./views/Inicio/Inicio"
 
 
 import Blog from "./components/extra/Blog";
+
+import Blog3 from "./components/extra/Blog3";
+
 import BlogCat from "./components/extra/BlogCat";
 import Shoping from "./components/Shoping";
 import Categoria from "./components/categoria";
@@ -108,11 +111,11 @@ import Archivos1 from "./archivos1";
 import PosHooks from "./views/Pos/PosHooks";
 
 
-import  { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 
-if(localStorage.jwtToken) {
+if (localStorage.jwtToken) {
   // Set auth token header auth
   setAuthToken(localStorage.jwtToken);
   // Decode token and get user info and expiration
@@ -165,109 +168,112 @@ const styles = {
 const useStyles = makeStyles(styles);
 
 
-const App = () =>{
+const App = () => {
   const classes = useStyles();
 
-  const data = useSelector (store => store.cartItem.showCartDlg) 
+  const data = useSelector(store => store.cartItem.showCartDlg)
 
 
 
-    return (
+  return (
 
-             <div>
-							 
-						  <Navbar />
-              
-                <Switch>
-                                      <Route path="/admin" component={Admin} />
-                                      <Route path="/" exact component={Redidigir} />
-                                      
-                                      <Route path="/rtl" component={RTL} />   
-                                    
-                                      <Route exact path='/login' component={ Login } />
+    <div>
 
+      <Navbar />
 
-                                      <Route exact path='/blog' component={ Blog } />
-                                      <Route exact path='/detblog/:handle' component={ DetBlog } />
-                                      <Route exact path='/detblog1/:handle' component={ BlogCat } />
+      <Switch>
+        <Route path="/admin" component={Admin} />
+        <Route path="/" exact component={Redidigir} />
 
-                                      <Route exact path='/categoria' component={ Categoria } />
-                                      <Route exact path='/shoping' component={ Shoping } />
-                                      <Route exact path='/lolo' component={ Dashboard1 } />
-                                      <Route exact path='/radio' component={Radio} />
-                                      <Route exact path='/nosotros' component={Nosotros} />
-                                      <Route exact path='/contacto' component={Contacto} />
-                                      <Route exact path='/privacidad' component={Privacidad} />
+        <Route path="/rtl" component={RTL} />
 
-                                      <Route exact path='/mision' component={Mision} />
-                                      <Route exact path='/historia' component={Historia} />
-                                      <Route exact path='/alcaldes' component={Alcaldes} />
-                                      <Route exact path='/simbolos' component={Simbolos} />
-                                      <Route exact path='/regidores' component={Regidores} />
-                                      <Route exact path='/alcalde' component={Alcalde} />
-                                      <Route exact path='/organigrama' component={Organigrama} />
-                                      <Route exact path='/personal' component={Personal} />
-                                      <Route exact path='/trabajaperu' component={Trabajaperu} />
-                                      <Route exact path='/seguridadciudadana' component={Seguridadciudadana} />
-                                      <Route exact path='/doctor' component={Doctor} />
-                                      <Route exact path='/construccion' component={Construccion} />
+        <Route exact path='/login' component={Login} />
 
 
-                                      <Route exact path='/inicio' component={ Inicio } />
-                                      <Route exact path='/register' component={ Register } />
-                                      <Route exact path='/menua' component={ Menu } />
-
-                                      <Route path="/prod" exact component={ProductList} />
-                                      <Route path="/details/:id" component={Details} />      
-                                      <Route path="/order" component={Order} />
-                                      <Route path="/dashboard" component={Dashboard} />
-                                      <Route path="/salir" component={Salir} />
-
-                                      <Route path="/pos" component={PosHooks} />
+        <Route exact path='/blog' component={Blog} />
+        <Route exact path='/blog3' component={Blog3} />
 
 
-                                      
+        <Route exact path='/detblog/:handle' component={DetBlog} />
+        <Route exact path='/detblog1/:handle' component={BlogCat} />
+
+        <Route exact path='/categoria' component={Categoria} />
+        <Route exact path='/shoping' component={Shoping} />
+        <Route exact path='/lolo' component={Dashboard1} />
+        <Route exact path='/radio' component={Radio} />
+        <Route exact path='/nosotros' component={Nosotros} />
+        <Route exact path='/contacto' component={Contacto} />
+        <Route exact path='/privacidad' component={Privacidad} />
+
+        <Route exact path='/mision' component={Mision} />
+        <Route exact path='/historia' component={Historia} />
+        <Route exact path='/alcaldes' component={Alcaldes} />
+        <Route exact path='/simbolos' component={Simbolos} />
+        <Route exact path='/regidores' component={Regidores} />
+        <Route exact path='/alcalde' component={Alcalde} />
+        <Route exact path='/organigrama' component={Organigrama} />
+        <Route exact path='/personal' component={Personal} />
+        <Route exact path='/trabajaperu' component={Trabajaperu} />
+        <Route exact path='/seguridadciudadana' component={Seguridadciudadana} />
+        <Route exact path='/doctor' component={Doctor} />
+        <Route exact path='/construccion' component={Construccion} />
 
 
+        <Route exact path='/inicio' component={Inicio} />
+        <Route exact path='/register' component={Register} />
+        <Route exact path='/menua' component={Menu} />
 
-                                      <Route path='/pdf/:id' component={PDF} />
-                                      <Route path='/archivos/:id' component={Archivos} />
-                                      <Route path='/archivos1/:id' component={Archivos1} />
+        <Route path="/prod" exact component={ProductList} />
+        <Route path="/details/:id" component={Details} />
+        <Route path="/order" component={Order} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/salir" component={Salir} />
 
-                                      <Route
-                                                        component={() => (
-                                                          <div style={{ padding: 20 }}>Page not found</div>
-                                                        )}
-                                                      />
-                            </Switch>
-
-
-               
-                  
-
-                            <Footer />
-              
-
-
-
-               
-
-                </div>  
-
-
-            
+        <Route path="/pos" component={PosHooks} />
 
 
 
 
 
 
-       
+        <Route path='/pdf/:id' component={PDF} />
+        <Route path='/archivos/:id' component={Archivos} />
+        <Route path='/archivos1/:id' component={Archivos1} />
 
-   ) 
-  }
+        <Route
+          component={() => (
+            <div style={{ padding: 20 }}>Page not found</div>
+          )}
+        />
+      </Switch>
 
-  export default App
+
+
+
+
+      <Footer />
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  )
+}
+
+export default App
 
 /*<Route path="/details/:id" component={Details} />
       <Route path="/login" component={Login} />
@@ -278,9 +284,9 @@ const App = () =>{
                <CartDialog />  </GridItem>
 
 
-               
-                  
-                        
+
+
+
 
 
 

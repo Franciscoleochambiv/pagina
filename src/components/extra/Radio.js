@@ -90,7 +90,7 @@ class Radio extends Component {
 
 
                         <h1 className="align center" >
-                            Radio Online
+                            Chat de Consultas
                           
 
 
@@ -99,9 +99,9 @@ class Radio extends Component {
 
                         <div className="container center">
 
-                            <a  href="https://adryan3.sytes.net/radio/" target="_blank" >
+                            <a  href="https://munichamacachat.sytes.net/" target="_blank" >
                                  <img className="img-fluid" 
-                                  src='https://adryan3.sytes.net/upload/file-1624807969391.png'                            
+                                  src='https://adryan3.sytes.net/upload/file-1637199953149.jpeg'                            
                                                     />
                             </a>
                             
